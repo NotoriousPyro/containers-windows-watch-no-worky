@@ -1,5 +1,5 @@
 {
-  "name": "radixtornado",
+  "name": "test",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -8,18 +8,21 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev --parallel --no-daemon",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@swc/core": "latest",
+    "@types/node": "^15.12.2",
+    "esbuild": "^0.14.10",
     "eslint-config-custom": "*",
+    "nodemon": "latest",
     "prettier": "latest",
-    "turbo": "latest"
+    "ts-node-dev": "^2.0.0",
+    "tsconfig": "*",
+    "turbo": "latest",
+    "typescript": "latest"
   },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "dependencies": {},
-  "packageManager": "npm@8.11.0"
+  "packageManager": "npm@7.7.6"
 }
